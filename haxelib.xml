@@ -1,0 +1,7 @@
+<project name="haxe-ammo.js" url="https://github.com/floppya/haxe-ammo.js" license="MIT">
+    <user name="floppya"/>
+    <tag v="js"/>
+    <tag v="physics"/>
+    <description>Extern definitions for Ammo.js, a port of the Bullet 3D physics engine to javascript.</description>
+    <version name="0.1">First release. Enough to simulate some rigid bodies.</version>
+</project>
