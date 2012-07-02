@@ -16,6 +16,14 @@ extern class BtVector3
 	public function w():BtScalar;
 }
 
+@:native('Ammo.btQuaternion')
+extern class BtQuaternion
+{
+	public function new():Void;
+	public function setEuler(yaw:BtScalar, pitch:BtScalar, roll:BtScalar):Void;
+	public function slerp(q:BtQuaternion, t:BtScalar):BtQuaternion;
+}
+
 @:native('Ammo.btActionInterface')
 extern class BtActionInterface
 {
@@ -58,6 +66,10 @@ extern class BtCollisionObject
 extern class BtRigidBody extends BtCollisionObject
 {
 	public function new(constructionInfo:BtRigidBodyConstructionInfo):Void;
+	public function applyCentralForce(force:BtVector3):Void;
+	public function applyCentralImpulse(impulse:BtVector3):Void;
+	public function clearForces():Void;
+	public function updateInertiaTensor():Void;
 	public function getMotionState():BtMotionState;
 }
 
